@@ -4,6 +4,14 @@ use Symfony\Component\Routing\RouteCollection;
 use Symfony\Component\Routing\Route;
 use Weeks\AppBundle\Controller\MainController;
 
+/**
+ * Generate route string
+ *
+ * @param $controllerClassName
+ * @param $methodName
+ * @param string $bundleName
+ * @return string
+ */
 function generateRoute($controllerClassName, $methodName, $bundleName = 'WeeksAppBundle')
 {
     $controller = class_basename($controllerClassName);

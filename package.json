@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "foundation-sites": "^6.2.4"
+  },
+  "devDependencies": {
+    "laravel-elixir": "^6.0.0-11"
+  }
+}
