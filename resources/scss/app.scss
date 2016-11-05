@@ -1,4 +1,53 @@
+@import "auroral/auroral";
+@import "fonts";
 @import "settings";
 @import "../../node_modules/foundation-sites/scss/foundation";
 
 @include foundation-everything;
+
+.auroral-container {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+
+    color: white;
+
+    h1{
+        font-size: 4rem;
+        letter-spacing: 0.1em;
+    }
+
+    header {
+        padding: 10vh 0 2vh 0;
+
+        h2 {
+            font-size: 1rem;
+            letter-spacing: 2px;
+        }
+    }
+
+    input {
+        margin-bottom: 1em;
+    }
+
+    button {
+        background-color: #44d14e;
+
+        &:active, &:hover, &:focus {
+            background-color: #37A842;
+        }
+    }
+
+    .image {
+        height: 200px;
+        width: 200px;
+        background: url(http://dannyweeks.com/images/uploads/2013/11/DSC_0017-1200.jpg) no-repeat;
+        background-position: -11px;
+        background-size: cover;
+        border-radius: 50%;
+        margin: 2vh auto 0 auto;
+        border: 1px solid #44d14e;
+    }
+}

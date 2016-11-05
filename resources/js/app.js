@@ -1,1 +1,1 @@
-alert('Hi!');
+$(document).foundation();

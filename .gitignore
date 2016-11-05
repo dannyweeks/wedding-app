@@ -3,8 +3,10 @@
 /app/cache/*
 /app/config/parameters.yml
 /app/logs/*
+/storage/*
 !app/cache/.gitkeep
 !app/logs/.gitkeep
+!/storage/.gitkeep
 /app/phpunit.xml
 /build/
 /vendor/

@@ -31,4 +31,8 @@ $collection->add('home', new Route('/', array(
     '_controller' => generateRoute(MainController::class, 'index'),
 )));
 
+$collection->add('save_rsvp', new Route('/save-rsvp', array(
+    '_controller' => generateRoute(MainController::class, 'saveRSVP'),
+)));
+
 return $collection;

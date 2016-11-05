@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300');
+
+@font-face {
+    font-family: 'Guest Check';
+    src: url('/css/fonts/guest-check.woff2') format('woff2'),
+    url('/css/fonts/guest-check.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.guest-check {
+    font-family: 'Guest Check';
+}
+
+@font-face {
+    font-family: 'Freehand';
+    src: url('/css/fonts/freehand.woff2') format('woff2'),
+    url('/css/fonts/freehand.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

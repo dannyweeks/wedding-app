@@ -1,4 +1,3 @@
 weeks_app:
     resource: "@WeeksAppBundle/Resources/config/routing.php"
     prefix:   /
-

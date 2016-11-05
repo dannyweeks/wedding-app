@@ -18333,5 +18333,5 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   // Window exports
   Foundation.plugin(Tooltip, 'Tooltip');
 }(jQuery);
-alert('Hi!');
+$(document).foundation();
 //# sourceMappingURL=app.js.map
