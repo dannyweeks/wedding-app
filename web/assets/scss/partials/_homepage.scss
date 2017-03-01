@@ -1,0 +1,306 @@
+.homepage {
+
+	header.header {
+		background-image: url('../images/danny-helen-bg.png');
+		// background-image: url('http://placehold.it/1440×805');
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		height: 100vh;
+
+		.is-stuck {
+			background-color: rgba($blue, 0.75) !important;
+		}
+
+		.top-bar, .top-bar ul {
+			background-color: transparent;
+
+			li {
+				a {
+					color: white;
+					font-family: $bodoni-std-book;
+				}
+			}
+		}
+
+		.top-bar-left {
+			width: 100%;
+			height: 48px;
+		}
+
+		.top-bar-left > ul {
+			margin: 0 auto;
+			position: relative;
+		    display: inline-block;
+
+		    li {
+		    	a {
+		    		padding: 1em 2em;
+		    	}
+		    }
+		}
+	}
+
+	.countdown-section {
+		background-image: url('../images/countdown-bg.png');
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		-webkit-box-shadow: 0px 7px 24px -9px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px 7px 24px -9px rgba(0,0,0,0.75);
+		box-shadow: 0px 7px 24px -9px rgba(0,0,0,0.75);
+
+		padding-top: 3em;
+		padding-bottom: 4em;
+		
+		.countdown {
+			list-style: none;
+			margin-left: 0;
+			margin-bottom: 0;
+
+			li {
+				display: inline-block;
+				position: relative;
+				margin-top: 1.875rem;
+
+				&:after {
+					content: "\f004";
+					font-family: $fontawesome;
+					position: absolute;
+					right: 0;
+					top: 50%;
+					color: $pink;
+					font-size: 12px;
+				}
+
+				span {
+					display: block;
+				}
+
+				.number {
+					font-size: 70px;
+					font-family: $bodoni-std-book;;
+					color: $black;
+				}
+
+				.seconds {
+					color: rgba($black, 0.5);
+				}
+
+				.date {
+					font-size: 16px;
+					margin-top: -32px;
+					font-family: $josefin-sans-regular;
+				}
+			}
+
+			li:last-child {
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+
+	#its-happening {
+		padding-top: 10em;
+		padding-bottom: 10em;
+		
+		.happening-content {
+			position: relative;
+
+			.the-big-day {
+				position: absolute;
+				left: -145px;
+			    top: -110px;
+				font-size: 77px;
+				font-family: $bodoni-std-poster;
+			    line-height: 74px;
+			    color: $even-fainter-gray;
+			    z-index: -1;
+
+				.month {
+					margin-left: 110px;
+				}
+
+				.year {
+					margin-left: 190px;
+				}
+			}
+
+			h1 {
+				font-size: 74px;
+				margin-top: 4rem;
+    			line-height: 84px;
+			}
+
+			h2 {
+				font-size: 34px;
+			    margin-top: 2em;
+			    line-height: 39px;
+			    margin-bottom: 0.5em;
+			}
+
+			p {
+
+			}
+		}
+
+		.illustration {
+			position: absolute;
+			bottom: -270px;
+			left: 36%;
+			border: none;
+			box-shadow: none;
+		}
+
+		.iceland {
+			z-index: -2;
+			margin-top: 2em;
+		}
+	}
+
+	.no-padding {
+		padding: 0;
+	}
+
+	#why-iceland {
+		margin-bottom: 4em;
+
+		h2 {
+			font-size: 74px;
+			margin-top: 2rem;
+			line-height: 84px;
+		}	
+
+		h3 {
+			font-size: 34px;
+			margin-top: 1em;
+			line-height: 39px;
+			margin-bottom: 1em;
+		}
+	}
+
+	.weather-bring {
+		margin-top: 7em;
+    	margin-bottom: 5em;
+
+		h2 {
+			font-size: 34px;
+			line-height: 40px;
+		}
+		
+		#weather, #bring {
+			&:before {
+				font-family: $fontawesome;
+				color: $pink;
+				position: absolute;
+			    left: -70px;
+			    font-size: 60px;
+			}
+		}
+		
+		#weather {
+			&:before {
+				content: "\f0c2";
+			    top: -9px;
+			}
+		}
+
+		#bring {
+			&:before {
+				content: "\f0f2";
+			    top: -20px;
+			}
+
+			.list-group {
+				list-style: none;
+				margin-left: 0;
+
+				li {
+					color: $pink;
+					font-weight: bold;
+					font-style: italic;
+
+					i {
+						margin-left: 1em;
+						font-size: 10px;
+						top: -2px;
+						position: relative;
+						left: -5px;
+						color: $primary-color;
+					}
+				}
+			}
+		}
+	}
+
+	#flights {
+		margin-top: 4em;
+		
+		h2 {
+			font-size: 74px;
+			margin-top: 2rem;
+			line-height: 84px;
+		}	
+
+		.iceland-2 {
+			margin-top: -110px;
+			z-index: -2;
+		}	
+	}
+
+	.photo-frame-right, .photo-frame-left {
+		position: relative;
+
+		img {
+			border-color: white;
+			border-style: solid;
+		}
+
+		&:after {
+			content: " ";
+			height: 100%;
+			width: 100%;
+			border-width: 5px;
+			border-color: $faint-gray;
+			border-style: solid;
+			position: absolute;
+			top: 22px;
+			z-index: -1;
+		}
+	}
+
+	.photo-frame-right {
+		img {
+			border-width: 0 10px 10px 0;
+			-webkit-box-shadow: 7px 7px 21px -6px rgba(0,0,0,0.75);
+			-moz-box-shadow: 7px 7px 21px -6px rgba(0,0,0,0.75);
+			box-shadow: 7px 7px 21px -6px rgba(0,0,0,0.75);
+		}
+
+		&:after {
+			right: -22px;
+		}
+	}
+
+	.photo-frame-left {
+		img {
+			border-width: 0 0 10px 10px;
+			-webkit-box-shadow: -7px 7px 21px -6px rgba(0,0,0,0.75);
+			-moz-box-shadow: -7px 7px 21px -6px rgba(0,0,0,0.75);
+			box-shadow: -7px 7px 21px -6px rgba(0,0,0,0.75);
+		}
+
+		&:after {
+			left: -22px;
+		}
+	}
+
+	footer.footer {
+		height: 100vh;
+		background-image: url('../images/iceland-footer.png');
+		background-size: cover;
+		background-position: center center;
+	}
+}

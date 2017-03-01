@@ -1,17 +1,207 @@
 <!doctype html>
 <html class="no-js" lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{{ asset('css/all.css') }}">
-        <title>{% block title %}The Weeks Wedding{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        {#<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />#}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        <script src="{{ asset('js/app.js') }}"></script>
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}The Weeks Wedding{% endblock %}</title>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="homepage">
+<header class="header">
+    <div data-sticky-container>
+        <div class="top-bar" data-sticky data-options="marginTop:0;" style="width:100%">
+            <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+                <button class="menu-icon" type="button" data-toggle="main-menu"></button>
+                <div class="title-bar-title">Menu</div>
+            </div>
+            <div class="top-bar-left text-center" id="main-menu">
+                <ul class="dropdown vertical medium-horizontal menu" data-dropdown-menu>
+                    <li><a href="#big-day">Big day!</a></li>
+                    <li><a href="#its-happening">It's Happening</a></li>
+                    <li><a href="#why-iceland">Why Iceland</a></li>
+                    <li><a href="#weather">The Weather</a></li>
+                    <li><a href="#weather">What To Bring</a></li>
+                    <li><a href="#flights">Flights</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="big-day" class="countdown-section">
+    <div class="row text-center">
+        <div class="large-18 large-centered columns">
+            <ul id="the-big-day" class="row small-up-2 medium-up-3 large-up-5 countdown"></ul>
+        </div>
+    </div>
+</div>
+
+<div id="its-happening">
+    <div class="row expanded">
+        <div class="large-11 columns no-padding photo-frame-right">
+            <div class="frame">
+                <img src="/assets/images/danny-helen.png" alt="">
+            </div>
+            <img class="illustration" src="/assets/images/illustration.png" alt="">
+        </div>
+        <div class="large-8 large-push-1 columns happening-content">
+            <div class="the-big-day">
+                <span class="day">4th</span><br>
+                <span class="month">NOV</span><br>
+                <span class="year">2017</span>
+            </div>
+            <h1>
+                It’s happening!
+            </h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pellentesque porttitor ultrices. Donec auctor, mauris at placerat efficitur, tortor nibh sagittis mauris, quis viverra diam massa ut massa.
+            </p>
+            <h2>
+                Lorem ipsum dolor sit amet, consectetur
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pellentesque porttitor ultrices. Donec auctor, mauris at placerat efficitur, tortor nibh sagittis mauris, quis viverra diam massa ut massa. Nulla lacinia neque sed diam maximus malesuada.
+            </p>
+            <a href="#why-iceland">Why Iceland? ></a>
+        </div>
+        <div class="large-11 columns large-pull-1 end no-padding photo-frame-right iceland">
+            <div class="frame">
+                <img src="/assets/images/iceland.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="why-iceland">
+    <div class="row expanded">
+        <div class="large-7 large-push-2 columns">
+            <h2>Why Iceland</h2>
+            <h3>
+                This could be the name of the place that you’re getting married
+            </h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pellentesque porttitor ultrices. Donec auctor, mauris at placerat efficitur, tortor nibh sagittis mauris, quis viverra diam massa ut massa. Nulla lacinia neque sed diam maximus malesuada.
+            </p>
+        </div>
+        <div class="large-14 columns no-padding photo-frame-left">
+            <div class="frame">
+                <img src="/assets/images/why-iceland.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="weather-bring">
+    <div class="row expanded">
+        <div class="large-18 columns large-centered">
+            <div id="weather" class="large-22 large-push-2 columns">
+                <h2>
+                    The Weather in <br>
+                    Novermeber is...
+                </h2>
+            </div>
+            <div class="large-9 large-push-2 columns">
+                <p>
+                    Freezing lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pellentesque porttitor ultrices. Donec auctor, mauris at placerat efficitur, tortor nibh sagittis mauris, quis viverra diam massa ut massa. Nulla lacinia neque sed diam maximus malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pellentesque porttitor ultrices.
+                </p>
+            </div>
+            <div id="bring" class="large-12 large-push-3 columns">
+                <h2>What you'll need</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <i class="fa fa-circle fa-fw" aria-hidden="true"></i>Walking boots
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fa fa-circle fa-fw" aria-hidden="true"></i>Long Johns
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fa fa-circle fa-fw" aria-hidden="true"></i>Skee coat
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fa fa-circle fa-fw" aria-hidden="true"></i>Compass
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fa fa-circle fa-fw" aria-hidden="true"></i>Camping stove
+                    </li>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div id="flights">
+    <div class="row expanded">
+        <div class="large-12 columns no-padding photo-frame-right">
+            <div class="frame">
+                <img src="/assets/images/flights.png" alt="">
+            </div>
+        </div>
+        <div class="large-8 large-push-1 columns">
+            <h2>Flights</h2>
+            <p>
+                Freezing lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pellentesque porttitor ultrices. Donec auctor, mauris at placerat efficitur.
+            </p>
+
+            <table class="unstriped" style="width: 70%;">
+                <tr>
+                    <td>Flight No:</td>
+                    <td>IS02439</td>
+                </tr>
+                <tr>
+                    <td>Gate No:</td>
+                    <td>No.7</td>
+                </tr>
+                <tr>
+                    <td>Time flight leaves</td>
+                    <td>10:34am</td>
+                </tr>
+                <tr>
+                    <td>Arrival Time</td>
+                    <td>15:30pm</td>
+                </tr>
+            </table>
+        </div>
+        <div class="large-16 large-push-4 columns end no-padding photo-frame-right iceland-2">
+            <div class="frame">
+                <img src="/assets/images/iceland-2.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+</footer>
+
+<script src="/vendor/jquery/dist/jquery.js"></script>
+<script src="/vendor/what-input/dist/what-input.js"></script>
+<script src="/vendor/foundation-sites/dist/js/foundation.js"></script>
+<script src="/assets/js/app.js"></script>
+<script src="/vendor/jquery.countdown/dist/jquery.countdown.js"></script>
+<script type="text/javascript">
+    (function($) {
+        $('#the-big-day').countdown("2017/11/4 11:00:00").on('update.countdown', function(event) {
+            var $this = $(this).html(event.strftime(''
+                    + '<li class="column column-block"><span class="number">%-w</span><span class="date">week%!w</span></div> '
+                    + '<li class="column column-block"><span class="number">%-d</span><span class="date">day%!d</span></div> '
+                    + '<li class="column column-block"><span class="number">%H</span><span class="date">hr</span></div> '
+                    + '<li class="column column-block"><span class="number">%M</span><span class="date">min</span></div> '
+                    + '<li class="column column-block"><span class="number seconds">%S</span><span class="date">sec</span></div>'));
+        });
+        $('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top - 80
+                    }, 2000);
+                    return false;
+                }
+            }
+        });
+    })(jQuery );
+</script>
+</body>
 </html>

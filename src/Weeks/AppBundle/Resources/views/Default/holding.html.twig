@@ -1,0 +1,108 @@
+{% extends 'templates/annon.html.twig' %}
+
+{% block content %}
+    <section class="auroral-container">
+        <div class="auroral-northern"></div>
+        <div class="auroral-stars"></div>
+        <div class="row">
+            <div class="medium-8 columns medium-centered text-center">
+                <header>
+                    <h1>
+                        The Weeks Wedding
+                    </h1>
+                    <h2 class="guest-check">
+                        Full Website Coming End Of November 2016
+                    </h2>
+                    <div class="image"></div>
+                </header>
+                <main>
+                    <div class="panel">
+                        <p class="pre-send-info">
+                            Please R.S.V.P by entering your name and email address.
+                        </p>
+                        <div class="row">
+                            <div class="medium-6 medium-centered columns">
+                                <form id="rsvp-form" action="{{ path('save_rsvp') }}" method="post">
+                                    <label for="name">
+                                        <input type="text" id="name" name="name" placeholder="Your name">
+                                    </label>
+                                    <label for="email">
+                                        <input type="email" id="email" name="email" placeholder="Your email address">
+                                    </label>
+                                    <button class="button" type="submit">
+                                        <strong>
+                                            R.S.V.P
+                                        </strong>
+                                    </button>
+                                    <p class="form-error" style="display: none;">
+                                        Something went wrong, please try again.
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row success-message" style="display: none">
+                            <div class="medium-8 columns medium-centered">
+                                <div>
+                                    <p>
+                                        Thank you for R.S.V.P-ing! We are so excited that you are coming!
+                                    </p>
+                                    <p>
+                                        Soon we will have a website just
+                                        for guests to provide more information about the big day as we lock things down
+                                        like the flight details and itinerary.
+                                    </p>
+                                    <p>
+                                        We will e-mail you when the full website is up and running :)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer>
+
+                </footer>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        $('#rsvp-form').on('submit', function (e) {
+            e.preventDefault();
+
+            var form = $(this);
+            var button = form.find('[type=submit]');
+            var preSendButton = button.html();
+            var successMessage = $('.success-message');
+
+            $.ajax({
+                url: form.attr('action'),
+                data: form.serialize(),
+                method: 'POST',
+                beforeSend: function () {
+                    button.html('Just jotting down your details...');
+                },
+                success: function (data) {
+                    successMessage.show();
+                    form.hide();
+                    $('.pre-send-info').hide();
+                },
+                error: function (error) {
+                    button.html(preSendButton);
+
+                    var response = error.responseJSON;
+                    var errorMessage = response.message;
+                    var errorContainer = form.find('.form-error');
+
+                    if (response.code) {
+                        errorContainer.text(errorMessage);
+                    }
+
+                    errorContainer.show();
+                }
+            });
+        });
+    </script>
+{% endblock %}

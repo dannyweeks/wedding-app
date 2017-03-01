@@ -1,0 +1,14 @@
+@include breakpoint(small only) {
+	.homepage {
+		header.header {
+			.top-bar {
+				padding: 0;
+			}
+			
+			.top-bar-left > ul, .title-bar {
+				width: 100%;
+				background-color: rgba($blue, 0.75) !important;
+			}
+		}
+	}
+}
