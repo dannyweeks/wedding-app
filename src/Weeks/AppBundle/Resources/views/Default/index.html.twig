@@ -29,6 +29,15 @@
             text-decoration: underline;
         }
 
+        @media screen and (min-width: 63.9375em) {
+            #venue h3 {
+                margin-top:270px;
+            }
+            .homepage #flights .iceland-2 {
+                margin-top: 0;
+            }
+        }
+
     </style>
 </head>
 <body class="homepage">
@@ -89,6 +98,12 @@
                     return false;
                 }
             }
+        });
+
+        $('.frame').each(function (key,frame) {
+            var frame = $(frame);
+            var image = frame.find('img');
+            frame.parent().css('max-width', image[0].naturalWidth)
         });
     })(jQuery);
 </script>
