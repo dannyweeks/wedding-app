@@ -253,21 +253,27 @@
 	.photo-frame-right, .photo-frame-left {
 		position: relative;
 
+		.frame {
+			width: auto;
+			position: relative;
+			display: inline-block;
+			
+			&:after {
+				content: " ";
+				height: 100%;
+				width: 100%;
+				border-width: 5px;
+				border-color: $faint-gray;
+				border-style: solid;
+				position: absolute;
+				top: 22px;
+				z-index: -1;
+			}
+		}
+
 		img {
 			border-color: white;
 			border-style: solid;
-		}
-
-		&:after {
-			content: " ";
-			height: 100%;
-			width: 100%;
-			border-width: 5px;
-			border-color: $faint-gray;
-			border-style: solid;
-			position: absolute;
-			top: 22px;
-			z-index: -1;
 		}
 	}
 
@@ -278,9 +284,11 @@
 			-moz-box-shadow: 7px 7px 21px -6px rgba(0,0,0,0.75);
 			box-shadow: 7px 7px 21px -6px rgba(0,0,0,0.75);
 		}
-
-		&:after {
-			right: -22px;
+		
+		.frame {
+			&:after {
+				right: -22px;
+			}
 		}
 	}
 
@@ -292,8 +300,10 @@
 			box-shadow: -7px 7px 21px -6px rgba(0,0,0,0.75);
 		}
 
-		&:after {
-			left: -22px;
+		.frame {
+			&:after {
+				left: -22px;
+			}
 		}
 	}
 
