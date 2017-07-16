@@ -25,14 +25,18 @@
             padding-top: 100px;
         }
 
-        .option-container p {
-            margin-top: -142px;
-            text-align: center;
-            font-size: 2em;
-            color: white;
-            text-shadow: 1px 1px black;
+        a {
+            text-decoration: underline;
         }
 
+        @media screen and (min-width: 1200px) {
+            #venue h3 {
+                margin-top:0;
+            }
+            .homepage #flights .iceland-2 {
+                margin-top: 50px;
+            }
+        }
 
     </style>
 </head>
@@ -46,16 +50,21 @@
             </div>
             <div class="top-bar-left text-center" id="main-menu">
                 <ul class="dropdown vertical medium-horizontal menu" data-dropdown-menu>
+
                 </ul>
             </div>
         </div>
     </div>
-    <h1 style="text-align: center; color:white; margin-top: 25px; font-size: 4rem;">
-        The Weeks Wedding
+    <h1 style="text-align: center; color:white; margin-top: 0px; font-size: 4rem;">
+        The Weeks Wedding <br> Reception
     </h1>
 </header>
 
-{% include 'WeeksAppBundle:Default/sections:options.html.twig' %}
+{#{% include '@WeeksApp/Default/sections/big-day.html.twig' %}#}
+{#{% include 'WeeksAppBundle:Default/sections:its-happening.html.twig' %}#}
+{% include '@WeeksApp/Default/reception/venue.html.twig' %}
+{% include '@WeeksApp/Default/reception/hotels.html.twig' %}
+
 
 <footer class="footer">
 </footer>
@@ -67,7 +76,7 @@
 <script src="/vendor/jquery.countdown/dist/jquery.countdown.js"></script>
 <script type="text/javascript">
     (function ($) {
-        $('#the-big-day').countdown("2017/11/4 11:00:00").on('update.countdown', function (event) {
+        $('#the-big-day').countdown("2017/11/17 19:00:00").on('update.countdown', function (event) {
             var $this = $(this).html(event.strftime(''
                     + '<li class="column column-block"><span class="number">%-w</span><span class="date">week%!w</span></div> '
                     + '<li class="column column-block"><span class="number">%-d</span><span class="date">day%!d</span></div> '

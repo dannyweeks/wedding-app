@@ -25,14 +25,18 @@
             padding-top: 100px;
         }
 
-        .option-container p {
-            margin-top: -142px;
-            text-align: center;
-            font-size: 2em;
-            color: white;
-            text-shadow: 1px 1px black;
+        a {
+            text-decoration: underline;
         }
 
+        @media screen and (min-width: 1200px) {
+            #venue h3 {
+                margin-top:270px;
+            }
+            .homepage #flights .iceland-2 {
+                margin-top: 0;
+            }
+        }
 
     </style>
 </head>
@@ -46,6 +50,7 @@
             </div>
             <div class="top-bar-left text-center" id="main-menu">
                 <ul class="dropdown vertical medium-horizontal menu" data-dropdown-menu>
+                    {% include '@WeeksApp/Default/partials/menu-items.html.twig' %}
                 </ul>
             </div>
         </div>
@@ -55,7 +60,14 @@
     </h1>
 </header>
 
-{% include 'WeeksAppBundle:Default/sections:options.html.twig' %}
+{% include '@WeeksApp/Default/sections/big-day.html.twig' %}
+{% include 'WeeksAppBundle:Default/sections:its-happening.html.twig' %}
+{% include '@WeeksApp/Default/sections/venue.html.twig' %}
+{% include 'WeeksAppBundle:Default/sections:weather.html.twig' %}
+{% include 'WeeksAppBundle:Default/sections:budget.html.twig' %}
+
+{% include '@WeeksApp/Default/sections/flights.html.twig' %}
+{% include 'WeeksAppBundle:Default/sections:itinerary.html.twig' %}
 
 <footer class="footer">
 </footer>

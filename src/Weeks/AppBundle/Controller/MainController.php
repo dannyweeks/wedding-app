@@ -18,6 +18,19 @@ class MainController extends Controller
     }
 
     /**
+     * @return Response
+     */
+    public function weddingAction()
+    {
+        return $this->render('WeeksAppBundle:Default:wedding.html.twig');
+    }
+
+    public function receptionAction()
+    {
+        return $this->render('WeeksAppBundle:Default:reception.html.twig');
+    }
+
+    /**
      * @param Request $request
      *
      * @return JsonResponse

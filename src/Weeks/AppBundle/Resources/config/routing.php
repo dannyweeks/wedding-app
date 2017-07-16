@@ -7,9 +7,10 @@ use Weeks\AppBundle\Controller\MainController;
 /**
  * Generate route string
  *
- * @param $controllerClassName
- * @param $methodName
+ * @param        $controllerClassName
+ * @param        $methodName
  * @param string $bundleName
+ *
  * @return string
  */
 function generateRoute($controllerClassName, $methodName, $bundleName = 'WeeksAppBundle')
@@ -29,6 +30,14 @@ $collection = new RouteCollection();
 
 $collection->add('home', new Route('/', array(
     '_controller' => generateRoute(MainController::class, 'index'),
+)));
+
+$collection->add('wedding', new Route('/wedding', array(
+    '_controller' => generateRoute(MainController::class, 'wedding'),
+)));
+
+$collection->add('reception', new Route('/reception', array(
+    '_controller' => generateRoute(MainController::class, 'reception'),
 )));
 
 $collection->add('save_rsvp', new Route('/save-rsvp', array(

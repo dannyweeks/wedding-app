@@ -1,29 +1,24 @@
 security:
-    encoders:
-        FOS\UserBundle\Model\UserInterface: bcrypt
-
-    role_hierarchy:
-        ROLE_ADMIN:       ROLE_USER
-        ROLE_SUPER_ADMIN: ROLE_ADMIN
-
     providers:
-        fos_userbundle:
-            id: fos_user.user_provider.username
+        in_memory:
+            memory:
+                users:
+                    guest:
+                        password: $2y$12$9IBBxfZ1kgR0K50XcD6Ri.CfUQF30JqJsaUiWl3foVFnb8Jh7SJ5u
+                        roles: 'ROLE_USER'
+    encoders:
+        Symfony\Component\Security\Core\User\User:
+            algorithm: bcrypt
+            cost: 12
 
     firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
         main:
-            pattern: ^/
-            form_login:
-                provider: fos_userbundle
-                csrf_token_generator: security.csrf.token_manager
-                # if you are using Symfony < 2.8, use the following config instead:
-                # csrf_provider: form.csrf_provider
-
-            logout:       true
-            anonymous:    true
-
+            anonymous: ~
+            http_basic: ~
     access_control:
-        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
-#        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
-#        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/admin/, role: ROLE_ADMIN }
+        # require ROLE_ADMIN for /admin*
+        - { path: ^/wedding, roles: ROLE_USER }
