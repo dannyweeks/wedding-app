@@ -38,6 +38,26 @@
             }
         }
 
+        .swipe {
+            overflow: hidden;
+            visibility: hidden;
+            position: relative;
+        }
+        .swipe-wrap {
+            overflow: hidden;
+            position: relative;
+        }
+        .swipe-wrap > div {
+            float: left;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #slider img {
+            max-height: 460px;
+        }
+
     </style>
 </head>
 <body class="homepage">
@@ -69,18 +89,20 @@
 {% include '@WeeksApp/Default/sections/flights.html.twig' %}
 {% include 'WeeksAppBundle:Default/sections:itinerary.html.twig' %}
 {% include 'WeeksAppBundle:Default/sections:guests.html.twig' %}
+{% include 'WeeksAppBundle:Default/sections:wedding-inspiration.html.twig' %}
 
 <footer class="footer">
 </footer>
 
 <script src="/vendor/jquery/dist/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/swipe/2.0.0/swipe.min.js"></script>
 <script src="/vendor/what-input/dist/what-input.js"></script>
 <script src="/vendor/foundation-sites/dist/js/foundation.js"></script>
 <script src="/assets/js/app.js"></script>
 <script src="/vendor/jquery.countdown/dist/jquery.countdown.js"></script>
 <script type="text/javascript">
     (function ($) {
-        $('#the-big-day').countdown("2017/11/4 11:00:00").on('update.countdown', function (event) {
+        $('#the-big-day').countdown("2017/11/4 12:00:00").on('update.countdown', function (event) {
             var $this = $(this).html(event.strftime(''
                     + '<li class="column column-block"><span class="number">%-w</span><span class="date">week%!w</span></div> '
                     + '<li class="column column-block"><span class="number">%-d</span><span class="date">day%!d</span></div> '
@@ -106,6 +128,24 @@
 //            var image = frame.find('img');
 //            frame.parent().css('max-width', image[0].naturalWidth)
         });
+        var element = document.getElementById('slider');
+        window.mySwipe = new Swipe(element, {
+            startSlide: 0,
+            draggable: true,
+            autoRestart: false,
+            continuous: true,
+            disableScroll: true,
+            stopPropagation: true,
+            callback: function(index, element) {},
+            transitionEnd: function(index, element) {}
+        });
+
+        var prevBtn = document.getElementById('prev'),
+            nextBtn = document.getElementById('next');
+
+        prevBtn.onclick = window.mySwipe.prev;
+        nextBtn.onclick = window.mySwipe.next;
+
     })(jQuery);
 </script>
 </body>

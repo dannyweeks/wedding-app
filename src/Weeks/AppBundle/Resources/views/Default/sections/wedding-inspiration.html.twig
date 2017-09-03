@@ -1,0 +1,25 @@
+<div id="wedding-inspiration-container">
+    <div class="row expanded">
+        <div class="large-20 columns large-centered">
+            <div style="text-align: center">
+                <h1 id="wedding-inspiration">
+                    Wedding Inspiration
+                </h1>
+                <p>
+                    All the pictures are from winter weddings in Iceland, hope it gives some ideas!
+                </p>
+                <div id="slider" class="swipe">
+                    <div class="swipe-wrap">
+                        {% for i in 1..16 %}
+                            <div><img src="/assets/images/inspiration/{{ i }}.jpg" alt=""></div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="button-group">
+                    <a class="button" id="prev">Prev</a>
+                    <a class="button" id="next">Next</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
