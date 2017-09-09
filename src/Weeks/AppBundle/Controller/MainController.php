@@ -63,4 +63,9 @@ class MainController extends Controller
 
         return new JsonResponse([]);
     }
+
+    public function mealFormAction(Request $request)
+    {
+        return $this->redirect('https://goo.gl/forms/Er1gDJzyVPvm8zk72');
+    }
 }

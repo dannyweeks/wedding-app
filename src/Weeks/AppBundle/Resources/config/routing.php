@@ -44,4 +44,8 @@ $collection->add('save_rsvp', new Route('/save-rsvp', array(
     '_controller' => generateRoute(MainController::class, 'saveRSVP'),
 )));
 
+$collection->add('meal_form', new Route('/wedding/order-your-food', array(
+    '_controller' => generateRoute(MainController::class, 'mealForm'),
+)));
+
 return $collection;
